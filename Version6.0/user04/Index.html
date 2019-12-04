@@ -6,13 +6,25 @@
     <head>
     
             <script src="JS/jquery-3.4.1.js"></script>
+        
+        <link rel='stylesheet'
+              href="CSS/Blue.css"><link>
+        
+            <link rel='stylesheet'
+                  href="CSS/Red.css"><link>
 
-                <title> Web Development User #4 </title>
+                <title> Web Development V6 User 4 </title>
         
             <style>
+
+                body{
+                    background-color:blueviolet;
+                }
+                    
+                
                 
                 ul li{
-                    color:red;
+                    color:darkred;
                 }
                 h1{
                     background-color: black;
@@ -20,9 +32,16 @@
                         color:white;
                         }
                 center{
+                    font-size:99;
+                    font-stretch: extra-expanded;
+                    
+                    font-style: italic;
+                    
+                    font-family: monospace;
+                    
                     color:lawngreen;
                         
-                        background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/97/Red-blue_stripes.svg)
+                        background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/97/Red-blue_stripes.svg);
                     
                     
                 }
@@ -31,12 +50,26 @@
     </head>
 
         <body>
+     
             
             <h1>Ok Boomer</h1>
     
                     <ul>
                         <li>something other than hello</li><li>aah yes more thing that arent hello</li><li>just one more non-hello thing</li>
                     </ul>
+            <script>
+                (function() {
+                    $("button").click(function(){
+                         var stylesheet =  $(this).data('datafile');
+                        $('link').attr('href', stylesheet + '.css');
+             });
+                })();
+                
+    
+            
+            
+            
+            </script>
             
                 <script>
                     var Boomer = $('h1');
@@ -44,8 +77,7 @@
                     var lis = $('ul li');
                     
                     $(Boomer).mouseover(function(){
-                        $(Boomer).css ("background-color", "white")
-                        ("text", "black");
+                        $(Boomer).css ({"background-color": "white",'color':'black'});
                         
                     
                        
@@ -53,7 +85,7 @@
                     });
                     
                     $(Boomer).mouseout(function(){
-                        $(Boomer).css ("background-color", "black");
+                        $(Boomer).css ({"background-color": "black", 'color':'white'});
                     });
                        
                     
@@ -61,8 +93,12 @@
                     console.log(Boomer);
                 </script>
             
-            <center> My name is User #4</center>
-
+            <center> My name is Garrett Criswell</center>
+       
+            <button data-file="Red">Red</button>
+            
+            <button data-file="Blue">Blue</button>
+            
         </body>
 
 </html>
