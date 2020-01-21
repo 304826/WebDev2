@@ -8,45 +8,12 @@
             <script src="JS/jquery-3.4.1.js"></script>
         
         <link rel='stylesheet'
-              href="CSS/Blue.css"><link>
-        
-            <link rel='stylesheet'
-                  href="CSS/Red.css"><link>
+              href="blue.css">
+
 
                 <title> Web Development V6 User 4 </title>
         
-            <style>
-
-                body{
-                    background-color:blueviolet;
-                }
-                    
-                
-                
-                ul li{
-                    color:darkred;
-                }
-                h1{
-                    background-color: black;
-                        
-                        color:white;
-                        }
-                center{
-                    font-size:99;
-                    font-stretch: extra-expanded;
-                    
-                    font-style: italic;
-                    
-                    font-family: monospace;
-                    
-                    color:lawngreen;
-                        
-                        background-image: url(https://upload.wikimedia.org/wikipedia/commons/9/97/Red-blue_stripes.svg);
-                    
-                    
-                }
-            </style>
-        
+            
     </head>
 
         <body>
@@ -59,10 +26,12 @@
                     </ul>
             <script>
                 (function() {
-                    $("button").click(function(){
-                         var stylesheet =  $(this).data('datafile');
-                        $('link').attr('href', stylesheet + '.css');
-             });
+               
+                $('button').click(function() {
+                    var stylesheet = $(this).text().toLowerCase();
+                    console.log(stylesheet);
+                    $('link').attr('href', stylesheet + '.css');
+                });
                 })();
                 
     
@@ -97,9 +66,9 @@
             
             <center> My name is Garrett Criswell</center>
        
-            <button data-file="Red">Red</button>
+            <button>Red</button>
             
-            <button data-file="Blue">Blue</button>
+            <button>Blue</button>
             
         </body>
 
